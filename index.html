@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Quizlit: Study Longer. Study Harder.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon-32x32.png">
+
+    <!-- Style Sheets -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap library -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="  sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/  nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/load.js"></script>
+    <script src="https://kit.fontawesome.com/5a86f9a71a.js"></script>
+    <script type="text/javascript">
+      $('#search-form').on('submit', function () {
+        var term = $("#search-input").val()
+        var url = 'https://quizlit.me/sets/flashcard.html?term=' + term
+        window.location.replace('https://quizlit.me')
+      }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-141204680-1');
+    </script>
+  </head>
+  
+  <body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <form class="form-inline my-2 my-lg-0 ml-auto" id="search-form">
+        <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+  </body>
+</html>
