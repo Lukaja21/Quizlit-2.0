@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Verdana', sans-serif !important;
+  overflow-x: hidden;
+}
+
+/*Custom Scroll Bar*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+/*Bootstrap Edits*/
+.navbar {
+  opacity:.9;
+}
+
+.container {
+  margin-top:10vh;
+}
+
+/*Search Page Elements*/
+.searchThumnail {
+  height: 3vh;
+  width: 3vh;
+  margin-right: .5vw
+}
+
+.searchHeader {
+  font-size: 10vh;
+  padding-bottom: 2.5vh 
+}
+
+#searchInput {
+  width: 100vw;
+  font-size: 1.75vh;
+  padding: 12px 20px 12px 15px;
+  border: 1px solid #ddd;
+}
+
+#searchUL {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  width: 100vw;
+  border: 1px solid #ddd;
+  border-top: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+#searchUL li a {
+  background-color: white;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none;
+  font-size: 1.75vh;
+  color: black;
+  display: block;
+  width: 100%;
+}
+
+#searchUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.searchLogo {
+  height:25vh;
+  display:block;
+  margin:auto;
+}
+
+/*Flashcard Page Elements*/
+.flashcardContainer {
+  width:100vw;
+  height:80vh;
+  margin-top:15vh;
+}
+
+.flashcardInfo {
+  width:10vw;
+  height:50vh;
+  border: 1px solid #ddd;
+  margin-left:1vw;
+  border-radius: 10px;
+  margin-top:5vh;
+  position: absolute;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.testDate {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 1vw;
+}
+
+.flashcard {
+  width:50vw;
+  height:60vh;
+  margin-left: 25vw;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  position: relative;
+}
+
+.flashcardArrows {
+  width: 100vw;
+  height: 2.5vh
+}
+
+.flashcardText {
+  font-size: 3vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
