@@ -5,6 +5,7 @@ html, body {
   overflow-x: hidden;
 }
 
+
 /*Custom Scroll Bar*/
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
@@ -136,4 +137,90 @@ html, body {
   text-align: center;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+/*Feed CSS*/
+.feedBox {
+  width:100%;
+  height:7.5vh;
+  margin-top: 2vh;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.thumbnailCrop {
+  position: absolute;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  height: 5.5vh;
+  width : 5.5vh;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.feedThumbnail {
+  height: 5.5vh;
+  width:auto;
+}
+
+.feedTitle {
+  position: absolute;
+  margin-top: 1vh;
+  margin-left: 5vw;
+  font-weight: bold;
+}
+
+.feedDate {
+  font-size: 1.75vh;
+  color: grey;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 2.25vh;
+  margin-right: 15vw;
+}
+
+.expandFeed {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 2vh;
+  margin-right: 1vw;
+}
+
+.moreFeed {
+  -webkit-animation:spinMore .75s;
+  -moz-animation:spinMore .75s;
+  animation:spinMore .75s;
+  animation-fill-mode: forwards;
+}
+
+@-moz-keyframes spinMore { 100% { -moz-transform: rotate(90deg); } }
+@-webkit-keyframes spinMore { 100% { -webkit-transform: rotate(90deg); } }
+@keyframes spinMore { 100% { -webkit-transform: rotate(90deg); transform:rotate(90deg); } }
+
+.lessFeed {
+  -webkit-animation:spinLess .75s;
+  -moz-animation:spinLess .75s;
+  animation:spinLess .75s;
+  animation-fill-mode: forwards;
+}
+
+@-moz-keyframes spinLess { 100% { -moz-transform: rotate(-90deg); } }
+@-webkit-keyframes spinLess { 100% { -webkit-transform: rotate(-90deg); } }
+@keyframes spinLess { 100% { -webkit-transform: rotate(-90deg); transform:rotate(-90deg); } }
+
+.feedText {
+  color: grey;
+  margin-top: 3.5vh;
+  margin-left: 5vw;
+}
+
+.feedInfo {
+  width:100%;
+  height: 15vh;
+  position: relative;
+  border: 1px solid #ddd;
+  border-top: 0px;
+  display: none;
 }

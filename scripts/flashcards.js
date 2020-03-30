@@ -69,8 +69,8 @@ function flip() {
 		$(".flashcardText").text(cards[card][side])
 		setTimeout(function (){
 			$(".flashcard").css("color", "black")
-		}, 400)
-	}, 400)
+		}, 350)
+	}, 350)
 }
 
 function right() {
@@ -84,8 +84,8 @@ function right() {
 			$(".flashcardText").text(cards[card][side])
 			setTimeout(function (){
 				$(".flashcard").css("color", "black")
-			}, 400)
-		}, 400)
+			}, 350)
+		}, 350)
 	}
 }
 
@@ -100,8 +100,8 @@ function left() {
 			$(".flashcardText").text(cards[card][side])
 			setTimeout(function (){
 				$(".flashcard").css("color", "black")
-			}, 400)
-		}, 400)
+			}, 350)
+		}, 350)
 	}
 }
 
