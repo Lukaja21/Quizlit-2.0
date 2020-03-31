@@ -22,21 +22,28 @@ $(document).ready(function() {
     else if (flashcardJson[key][0] == "math") {var thumbnail = "../images/math.jpg"}
     else if (flashcardJson[key][0] == "humanities") {var thumbnail = "../images/humanities.jpg"}
     else {var thumbnail = "../images/other.jpg"}
-    $("#searchUL").append(`<li><a href='../sets/flashcard.html?name=${key}'><img src='${thumbnail}' class='searchThumnail'>${key}</a></li>`)
+    $("#searchUL").append(`<li subject=${flashcardJson[key][0]}><a href='../sets/flashcard.html?name=${key}'><img src='${thumbnail}' class='searchThumnail'>${key}</a></li>`)
   }
 
 });
 
+function changeSubject(subject) {
+  $("#dropdownMenuButton").attr("value", subject)
+  $("#dropdownMenuButton").text(subject.charAt(0).toUpperCase() + subject.slice(1))
+}
+
 function hideSearch() {
   if ($("#searchInput").is(":focus")) {
     $("#searchUL").show();
+    myFunction()
   } else {
     $("#searchUL").hide();
   }
 }
 
 function myFunction() {
-  // Declare variables
+  var subject = $("#dropdownMenuButton").attr("value")
+
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('searchInput');
   filter = input.value.toUpperCase();
@@ -48,7 +55,11 @@ function myFunction() {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      $(li[i]).show();
+      if ($(li[i]).attr("subject") == subject || subject == "all") {
+        $(li[i]).show();
+      } else {
+        $(li[i]).hide();
+      }
     } else {
       $(li[i]).hide();
     }

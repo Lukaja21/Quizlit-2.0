@@ -48,10 +48,35 @@ html, body {
 }
 
 #searchInput {
-  width: 100vw;
+  width: 100%;
+  margin-left: 10%;
   font-size: 1.75vh;
-  padding: 12px 20px 12px 15px;
-  border: 1px solid #ddd;
+  padding: 12px 20px 5px 15px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#searchInput:focus{
+  outline-width: 0; 
+  border-bottom: 1px solid #ADD8E6;
+}
+
+#searchDropdown {
+  position: absolute;
+  margin-top: .5vh;
+  background-color: white;
+  width: auto;
+}
+
+#dropdownMenuButton {
+  background-color: white;
+  color:black;
+  border: 0;
+  padding: 10px 5% 10px 5%;
+}
+
+#dropdownMenuButton:focus {
+  border:white;
 }
 
 #searchUL {
@@ -64,6 +89,8 @@ html, body {
   border-top: 0;
   max-height: 50vh;
   overflow-y: auto;
+  width: 90%;
+  margin-left: 10%;
 }
 
 #searchUL li a {

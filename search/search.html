@@ -68,6 +68,19 @@
     <div class="container">
       <img src="../images/logo.png" class="searchLogo">
       <div class="row">
+          <div class="dropdown" id="searchDropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="all">
+              All
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" onclick="changeSubject('all')">All</a>
+              <a class="dropdown-item" onclick="changeSubject('science')">Science</a>
+              <a class="dropdown-item" onclick="changeSubject('humanities')">Humanities</a>
+              <a class="dropdown-item" onclick="changeSubject('math')">Math</a>
+              <a class="dropdown-item" onclick="changeSubject('chinese')">Chinese</a>
+              <a class="dropdown-item" onclick="changeSubject('other')">Other</a>
+            </div>
+          </div>
           <input type="text" id="searchInput" onkeyup="myFunction();$('#myUL').show()" placeholder="Search for sets.." autofocus>
           <ul id="searchUL"></ul>
       </div>
